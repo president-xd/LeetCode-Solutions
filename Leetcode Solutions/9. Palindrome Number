@@ -1,8 +1,25 @@
+# Hello there,
 
+## Question no: 9: Palindrome number
+![image](https://github.com/user-attachments/assets/ba537769-97d9-4823-bd4d-8492a6fa1768)
+![image](https://github.com/user-attachments/assets/86999928-ad11-4bb9-a154-2cb4870704a7)
 
 ## Solution
 ### Python = 
 ```python
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        simple = str(x)
+        reverse = ""
+
+        for i in range(len(simple) - 1, -1, -1):
+            reverse += simple[i]
+
+        return reverse == simple
 
 ```
 
