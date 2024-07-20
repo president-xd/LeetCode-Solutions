@@ -6,6 +6,7 @@
 ![image](https://github.com/user-attachments/assets/f0925371-6213-4a79-9030-5e051e4a0c2b)
 
 ## Solution
+### Python = 
 ```python
 class Solution(object):
   def twoSum(self, nums, target):
@@ -19,6 +20,7 @@ class Solution(object):
     # Step 4: If no such pair is found, return an empty list.
     return []
 ```
+### C++ = 
 ```c++
 class Solution {
 public:
