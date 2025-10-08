@@ -5,4 +5,4 @@ public:
         temp->next = list;
         list = temp;
     }
-}
+};
