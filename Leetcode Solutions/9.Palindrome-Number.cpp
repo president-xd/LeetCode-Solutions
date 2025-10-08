@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        string simple = to_string(x), reverse = "";
+        for (int i = simple.length() - 1; i >= 0; i--){
+            reverse += simple[i];
+        }
+
+        if (reverse == simple){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};
