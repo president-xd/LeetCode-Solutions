@@ -1,13 +1,3 @@
-# Hello Guy's
-
-## Question no: 234: Palindrome Linked List
-![image](https://github.com/user-attachments/assets/c4186a3c-c81e-49ea-b39b-f6b4331a9ac7)
-
-
-## Solution
-
-### Cpp = 
-```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -64,45 +54,3 @@ public:
         return true; // List is a palindrome
     }
 };
-
-```
-### Python = 
-
-```python
-class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
-        current = head
-        prev = None
-        while current is not None:
-            next_node = current.next  # Save the next node
-            current.next = prev       # Reverse the link
-
-            prev = current            # Move prev to current
-            current = next_node       # Move current to next
-        return prev
-
-    def isPalindrome(self, head: ListNode) -> bool:
-        if head is None or head.next is None:
-            return True  # Edge case: empty or single-node list
-
-        # Step 1: Find the middle of the list
-        slow = head
-        fast = head
-        while fast is not None and fast.next is not None:
-            slow = slow.next
-            fast = fast.next.next
-
-        # Step 2: Reverse the second half of the list
-        second_half = self.reverseList(slow)
-
-        # Step 3: Compare the two halves
-        temp = second_half
-        current = head
-        while temp is not None:
-            if temp.val != current.val:
-                return False  # Not a palindrome
-            temp = temp.next
-            current = current.next
-
-        return True  # List is a palindrome
-```
